@@ -62,7 +62,7 @@ export default {
       const formdata = this.form;
       if (formdata.name == "admin" && formdata.password == "admin") {
         this.$message({
-          message: `登录成功!欢迎您 ${formdata.name}`,
+          message: `登录成功!`,
           type: "success",
           center: true
         });
@@ -84,6 +84,13 @@ export default {
 </script>
 
 <style lang="less">
+::-webkit-scrollbar {
+  display: none;
+}
+
+::-ms-scrollbar {
+  display: none;
+}
 body {
   background: url("../../assets/img/container_bg.jpg") no-repeat center;
   background-size: cover;

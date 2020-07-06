@@ -5,16 +5,16 @@
       <div class="nav">
         <div class="nav-aslide1">
           <router-link to="/home/dashboard">数据展示</router-link>
-          <router-link to="/about">趋势图表</router-link>
+          <router-link to="/home/charts">趋势图表</router-link>
         </div>
         <div class="nav-aslide2"></div>
         <div class="nav-aslide3">
-          <router-link to="/">实时报警</router-link>
-          <router-link to="/login">个人中心</router-link>
+          <router-link to="/home/alarm">实时报警</router-link>
+          <router-link to="/home/usercenter">个人中心</router-link>
         </div>
       </div>
       <div class="avatar">
-        <el-avatar :src="avatarUrl"></el-avatar>
+        <!-- <el-avatar :src="avatarUrl"></el-avatar> -->
         <el-dropdown @command="handleCommand" size="mini" trigger="click">
           <span class="el-dropdown-link username">
             admin
@@ -30,9 +30,9 @@
 
     <div class="main">
       <div class="box">
-        <div>
-          <router-view class="router-view" />
-        </div>
+          <transition :name="SkipSwitchName">
+            <router-view class="router-view" />
+          </transition>
       </div>
     </div>
   </div>
@@ -43,12 +43,32 @@ export default {
   name: "Layout",
   data() {
     return {
-      avatarUrl: "../../assets/img/avator.png"
+      SkipSwitchName:""
     };
+  },
+   watch: {
+    $route(to, from) {
+      if (to.meta.tx < from.meta.tx) {
+        this.SkipSwitchName= "Skright";
+      } else {
+        this.SkipSwitchName= "Skleft";
+      }
+    }
   },
   methods: {
     handleCommand(e) {
-      console.log(e);
+      switch (e){
+        case 'logout':
+          this.$router.push({ path:'/'});
+          this.$message({
+          message: `注销成功!`,
+          type: "info",
+          center: true
+          });
+        break;
+        case 'user-center':
+          this.$router.push({ path:'/home/usercenter'});
+      }
     }
   }
 };
@@ -132,10 +152,12 @@ body {
           color: #fff;
           font-size: 2.5vh;
           font-weight: bold;
-          width: 100%;
-          height: 100%;
+          width: 40%;
+          height: 60%;
           &.router-link-exact-active {
             color: #42b983;
+            // background-color: #ddd;
+            transition:all 0.5s ease-out;
           }
         }
       }
@@ -229,6 +251,24 @@ body {
   &::before,
   &::after {
     background: linear-gradient(120deg, @bg-color-1, @bg-color-2, @bg-color-3);
+  }
+  .Skright-enter-active,
+  .Skright-leave-active,
+  .Skleft-enter-active,
+  .Sklef-leave-active {
+    transition: all 600ms;
+  }
+  .Skright-enter {
+  transform: translate3d(-100%, 0, 0);
+  }
+  .Skright-leave-to {
+    transform: translate3d(100%, 0, 0);
+  }
+  .Skleft-enter {
+    transform: translate3d(100%, 0, 0);
+  }
+  .Skleft-leave-to {
+    transform: translate3d(-100%, 0, 0);
   }
 }
 </style>

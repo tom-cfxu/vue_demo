@@ -26,7 +26,38 @@ const routes = [
       {
         path: 'dashboard',
         name: 'dashboard',
-        component: () => import('@/views/Dashboard/Dashboard.vue')
+        component: () => import('@/views/Dashboard/Dashboard.vue'),
+        meta: {
+          title:"首页",
+          tx:1
+        }
+      },
+      {
+        path: 'charts',
+        name: 'charts',
+        component: () => import('@/views/Charts/Charts.vue'),
+        meta: {
+          title:"趋势图表",
+          tx:2
+        }
+      },
+      {
+        path: 'alarm',
+        name: 'alarm',
+        component: () => import('@/views/Alarm/Alarm.vue'),
+        meta: {
+          title:"报警",
+          tx:3
+        }
+      },
+      {
+        path: 'usercenter',
+        name: 'usercenter',
+        component: () => import('@/views/UserCenter/UserCenter.vue'),
+        meta: {
+          title:"个人中心",
+          tx:4
+        }
       },
     ]
   },
