@@ -111,9 +111,6 @@ body {
   grid-template-areas:
     "header"
     "main";
-  h1 {
-    line-height: 100%;
-  }
   .header {
     position: relative;
     grid-area: header;
@@ -129,7 +126,6 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     opacity: 0.8;
-
     border: 1px solid @bg-color-1;
     border-bottom: none;
     .nav {
@@ -155,6 +151,7 @@ body {
           width: 40%;
           height: 60%;
           text-shadow: 2px 2px 10px #000;
+          user-select: none;
           &.router-link-exact-active {
             color: #42b983;
             // background-color: #ddd;
@@ -181,6 +178,12 @@ body {
       top: 100%;
       transform: translate(-50%, -50%);
       text-shadow: 5px 2px 6px #000;
+      -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Chrome/Safari/Opera */
+      -khtml-user-select: none; /* Konqueror */
+      -moz-user-select: none; /* Firefox */
+      -ms-user-select: none; /* Internet Explorer/Edge */
+      user-select: none;
     }
     .avatar {
       position: absolute;
@@ -274,13 +277,15 @@ body {
     transform: translate3d(-100%, 0, 0);
   }
 }
-// @media screen and (max-width: 900px) {
-//   .header {
-//     background: #fff;
-//     h1 {
-//       font-size: 16px;
-//       font-weight: 100;
-//     }
-//   }
-// }
+@media screen and (max-width: 900px) {
+  .header {
+    background: #fff;
+    h1 {
+      font-size: 4vw !important;
+    }
+    .nav a {
+      font-size: 2vw !important;
+    }
+  }
+}
 </style>

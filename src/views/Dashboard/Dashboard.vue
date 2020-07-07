@@ -1368,13 +1368,7 @@ export default {
     let self = this;
     setTimeout(() => {
       self.map.center = self.map.marker;
-      self.map.zoom = 10;
-      setTimeout(() => {
-        self.map.zoom = 15;
-        setTimeout(() => {
-          self.map.zoom = 17;
-        }, 1000);
-      }, 1000);
+      self.map.zoom = 17;
     }, 2000);
   },
   created() {}
