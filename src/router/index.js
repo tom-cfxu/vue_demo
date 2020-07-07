@@ -16,7 +16,6 @@ const routes = [
   },
   {
     path: '/home',
-    name: 'home',
     component: () => import('@/views/Layout/Layout.vue'),
     children: [
       {
@@ -28,8 +27,8 @@ const routes = [
         name: 'dashboard',
         component: () => import('@/views/Dashboard/Dashboard.vue'),
         meta: {
-          title:"首页",
-          tx:1
+          title: "首页",
+          tx: 1
         }
       },
       {
@@ -37,8 +36,8 @@ const routes = [
         name: 'charts',
         component: () => import('@/views/Charts/Charts.vue'),
         meta: {
-          title:"趋势图表",
-          tx:2
+          title: "趋势图表",
+          tx: 2
         }
       },
       {
@@ -46,8 +45,8 @@ const routes = [
         name: 'alarm',
         component: () => import('@/views/Alarm/Alarm.vue'),
         meta: {
-          title:"报警",
-          tx:3
+          title: "报警",
+          tx: 3
         }
       },
       {
@@ -55,8 +54,8 @@ const routes = [
         name: 'usercenter',
         component: () => import('@/views/UserCenter/UserCenter.vue'),
         meta: {
-          title:"个人中心",
-          tx:4
+          title: "个人中心",
+          tx: 4
         }
       },
     ]

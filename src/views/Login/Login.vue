@@ -76,9 +76,28 @@ export default {
           center: true
         });
       }
+    },
+    // eslint-disable-next-line no-unused-vars
+    enterKey(event) {
+      // if (event.key === "Enter") {
+      //   if (this.form.name == "" || this.form.password == "") {
+      //     return;
+      //   } else {
+      //     this.onSubmit();
+      //     // console.log("登录!");
+      //   }
+      // }
+    },
+    enterKeyupDestroyed() {
+      document.removeEventListener("keyup", this.enterKey);
+    },
+    enterKeyup() {
+      document.addEventListener("keyup", this.enterKey);
     }
   },
-  mounted() {},
+  mounted() {
+    this.enterKeyup();
+  },
   created() {}
 };
 </script>

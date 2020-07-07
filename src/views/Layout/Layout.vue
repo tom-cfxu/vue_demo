@@ -30,9 +30,9 @@
 
     <div class="main">
       <div class="box">
-          <transition :name="SkipSwitchName">
-            <router-view class="router-view" />
-          </transition>
+        <transition :name="SkipSwitchName">
+          <router-view class="router-view" />
+        </transition>
       </div>
     </div>
   </div>
@@ -43,31 +43,31 @@ export default {
   name: "Layout",
   data() {
     return {
-      SkipSwitchName:""
+      SkipSwitchName: ""
     };
   },
-   watch: {
+  watch: {
     $route(to, from) {
       if (to.meta.tx < from.meta.tx) {
-        this.SkipSwitchName= "Skright";
+        this.SkipSwitchName = "Skright";
       } else {
-        this.SkipSwitchName= "Skleft";
+        this.SkipSwitchName = "Skleft";
       }
     }
   },
   methods: {
     handleCommand(e) {
-      switch (e){
-        case 'logout':
-          this.$router.push({ path:'/'});
+      switch (e) {
+        case "logout":
+          this.$router.push({ path: "/" });
           this.$message({
-          message: `注销成功!`,
-          type: "info",
-          center: true
+            message: `注销成功!`,
+            type: "info",
+            center: true
           });
-        break;
-        case 'user-center':
-          this.$router.push({ path:'/home/usercenter'});
+          break;
+        case "user-center":
+          this.$router.push({ path: "/home/usercenter" });
       }
     }
   }
@@ -154,10 +154,11 @@ body {
           font-weight: bold;
           width: 40%;
           height: 60%;
+          text-shadow: 2px 2px 10px #000;
           &.router-link-exact-active {
             color: #42b983;
             // background-color: #ddd;
-            transition:all 0.5s ease-out;
+            transition: all 0.5s ease-out;
           }
         }
       }
@@ -179,6 +180,7 @@ body {
       left: 50%;
       top: 100%;
       transform: translate(-50%, -50%);
+      text-shadow: 5px 2px 6px #000;
     }
     .avatar {
       position: absolute;
@@ -192,11 +194,12 @@ body {
     }
   }
   .username {
-    background: #37a38390;
+    background: #1ea3ed;
     width: 100%;
     height: 100%;
     padding: 10px;
     border-radius: 10px;
+    opacity: 0.8;
     color: #fff;
     cursor: pointer;
   }
@@ -259,7 +262,7 @@ body {
     transition: all 600ms;
   }
   .Skright-enter {
-  transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
   }
   .Skright-leave-to {
     transform: translate3d(100%, 0, 0);
@@ -271,4 +274,13 @@ body {
     transform: translate3d(-100%, 0, 0);
   }
 }
+// @media screen and (max-width: 900px) {
+//   .header {
+//     background: #fff;
+//     h1 {
+//       font-size: 16px;
+//       font-weight: 100;
+//     }
+//   }
+// }
 </style>
