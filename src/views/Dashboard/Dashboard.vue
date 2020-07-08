@@ -2,12 +2,12 @@
   <div class="dashboard">
     <div class="left">
       <div class="chart1">
-        <BorderBox title="报警">
+        <BorderBox title="数据汇总">
           <div id="chart1"></div>
         </BorderBox>
       </div>
       <div class="chart2">
-        <BorderBox>
+        <BorderBox title="实时数据">
           <div id="chart2"></div>
         </BorderBox>
       </div>
@@ -69,7 +69,6 @@ export default {
       map: {
         marker: { lng: 117.01201, lat: 25.098969 },
         center: { lng: 105.200945, lat: 33.658614 },
-
         zoom: 5,
         show: false,
         dragging: true,
@@ -1362,6 +1361,93 @@ export default {
       map.addEventListener("click", function(e) {
         console.log(e.point.lng, e.point.lat);
       });
+    },
+    chart1() {
+      let myChart = this.$echarts.init(document.getElementById("chart2"));
+      const lineColor = "#B9E1FC";
+      let option = {
+        color: ["#3398DB"],
+        title: { text: "" },
+        tooltip: {
+          trigger: "axis",
+          axisPointer: {
+            type: "shadow"
+          }
+        },
+        grid: {
+          bottom: "15%",
+          left: "15%",
+          top: "20%"
+        },
+        xAxis: {
+          data: ["设备1", "设备2", "设备3", "设备4", "设备5", "设备6", "设备7"],
+          axisLine: {
+            lineStyle: {
+              color: lineColor
+            }
+          },
+          axisTick: {
+            show: false
+          },
+          axisLabel: {
+            inside: false,
+            textStyle: {
+              itemSize: ""
+            }
+          }
+        },
+        yAxis: {
+          type: "value",
+          splitLine: {
+            show: false
+          },
+          axisTick: {
+            show: false
+          },
+          axisLine: {
+            lineStyle: {
+              color: lineColor
+            }
+          }
+        },
+        series: [
+          {
+            name: "实时数据",
+            type: "bar",
+            data: [24, 10, 20, 10, 10, 20, 30],
+            backgroundStyle: {
+              color: "rgba(220, 220, 220, 0.5)"
+            },
+            itemStyle: {
+              barBorderRadius: [5, 5, 0, 0],
+              color: new this.$echarts.graphic.LinearGradient(0, 0, 1, 1, [
+                { offset: 0, color: "#54F5C2" },
+                { offset: 0.6, color: "#1f82d3" }
+              ])
+            },
+
+            showBackground: false
+          }
+        ]
+      };
+      myChart.setOption(option);
+      setInterval(() => {
+        let rand = [];
+        for (let i = 0; i < 7; i++) {
+          let num = Math.round(Math.random() * (30 - 10) + 10);
+          rand.push(num);
+        }
+        myChart.setOption({
+          series: [
+            {
+              data: rand
+            }
+          ]
+        });
+        window.onresize = function() {
+          myChart.resize();
+        };
+      }, 2000);
     }
   },
   mounted() {
@@ -1370,6 +1456,7 @@ export default {
       self.map.center = self.map.marker;
       self.map.zoom = 17;
     }, 2000);
+    this.chart1();
   },
   created() {}
 };
