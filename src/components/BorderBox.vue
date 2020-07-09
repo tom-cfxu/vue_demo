@@ -17,7 +17,7 @@ export default {
   props: {
     title: {
       type: String,
-      default: "标题"
+      default: ""
     }
   }
 };
@@ -36,7 +36,8 @@ export default {
   box-sizing: border-box;
   border-radius: @radius;
   padding: 5px;
-  box-shadow: 1px 1px 10px 1px #333;
+  box-shadow: -8px -8px 10px -12px rgb(196, 242, 248),
+    8px 8px 10px -5px rgba(0, 0, 0, 1);
   background-image: linear-gradient(60deg, #5736ec, #1baaee);
   .i1,
   .i2,
@@ -55,7 +56,8 @@ export default {
     // transform: rotate(7deg);
     top: 5px;
     right: -18px;
-    box-shadow: 1px 1px 10px 5px #333;
+    box-shadow: -8px -8px 10px -12px rgb(196, 242, 248),
+      8px 8px 10px -5px rgba(0, 0, 0, 1);
     z-index: -1;
   }
   .i2 {
@@ -108,7 +110,8 @@ export default {
   background: #0b2d78;
   border-radius: @radius;
   opacity: 0.8;
-  box-shadow: inset 2px 2px 10px 1px #111;
+  box-shadow: -8px -8px 10px -12px rgb(255, 255, 255) inset,
+    8px 8px 10px -5px rgba(0, 0, 0, 1) inset;
   .title {
     font-size: 24px;
     font-weight: bold;
@@ -116,7 +119,8 @@ export default {
     left: 50%;
     top: 20px;
     transform: translate(-50%, -50%);
-    text-shadow: 5px 2px 6px #000;
+    text-shadow: -1px -1px 2px rgb(255, 255, 255, 0.1),
+      4px 4px 5px rgba(0, 0, 0, 1);
   }
 }
 </style>

@@ -21,7 +21,7 @@ Vue.use(BaiduMap, {
   ak: 'bPwPDeEBO12Ry9me2FMqmqvHPjmrv1z1'
 });
 Vue.use(new VueSocketIO({
-  debug: true,
+  debug: false,
   connection: 'localhost:3000',  //
 }))
 new Vue({

@@ -4,13 +4,26 @@
       <h1>龙净环保云服务平台</h1>
       <div class="nav">
         <div class="nav-aslide1">
-          <router-link to="/home/dashboard">数据展示</router-link>
-          <router-link to="/home/charts">趋势图表</router-link>
+          <router-link to="/home/dashboard">
+            <i class="el-icon-s-data"></i>
+            数据展示
+          </router-link>
+          <router-link to="/home/charts">
+            <i class="el-icon-data-line"></i>
+            趋势图表
+          </router-link>
         </div>
         <div class="nav-aslide2"></div>
         <div class="nav-aslide3">
-          <router-link to="/home/alarm">实时报警</router-link>
-          <router-link to="/home/usercenter">个人中心</router-link>
+          <router-link to="/home/alarm">
+            <i class="el-icon-warning"></i>
+            &emsp;
+            实时报警
+          </router-link>
+          <router-link to="/home/assemble">
+            <i class="el-icon-monitor"></i>
+            组态监控
+          </router-link>
         </div>
       </div>
       <div class="avatar">
@@ -106,7 +119,7 @@ body {
   height: 100%;
   overflow: hidden;
   margin: 0;
-  grid-template-rows: 15% 85%;
+  grid-template-rows: 12% 88%;
   grid-template-columns: 1fr;
   grid-template-areas:
     "header"
@@ -152,9 +165,11 @@ body {
           height: 60%;
           text-shadow: 2px 2px 10px #000;
           user-select: none;
+          text-indent: 10px;
           &.router-link-exact-active {
             color: #42b983;
             // background-color: #ddd;
+            text-indent: 20px;
             transition: all 0.5s ease-out;
           }
         }

@@ -50,14 +50,28 @@ const routes = [
         }
       },
       {
+        path: 'assemble',
+        name: 'assemble',
+        component: () => import('@/views/Assemble/Assemble.vue'),
+        meta: {
+          title: "组态监测",
+          tx: 4
+        }
+      },
+      {
         path: 'usercenter',
         name: 'usercenter',
         component: () => import('@/views/UserCenter/UserCenter.vue'),
         meta: {
           title: "个人中心",
-          tx: 4
+          tx: 5
         }
       },
+      {
+
+        path: "*",
+        redirect: "/"
+      }
     ]
   },
 

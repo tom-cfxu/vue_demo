@@ -3,19 +3,22 @@
     <div class="left">
       <div class="chart1">
         <BorderBox title="数据汇总">
-          <div id="chart1"></div>
+          <div class="data">
+            <DataBox icon="el-icon-user-solid" name="注册客户" value="12" unit="人" />
+            <DataBox icon="el-icon-menu" name="项目数量" value="3" unit="台" />
+            <DataBox icon="el-icon-s-platform" name="在线设备" value="1" unit="台" />
+            <DataBox icon="el-icon-s-opportunity" name="流量池流量" value="1250" unit="M" />
+            <DataBox icon="el-icon-s-grid" name="已使用流量" value="698" unit="M" />
+          </div>
         </BorderBox>
       </div>
       <div class="chart2">
-        <BorderBox title="实时数据">
+        <BorderBox title="柱状图">
           <div id="chart2"></div>
         </BorderBox>
       </div>
     </div>
     <div class="center">
-      <!-- <BorderBox>
-        
-      </BorderBox>-->
       <baidu-map
         class="map"
         :center="map.center"
@@ -44,7 +47,7 @@
     </div>
     <div class="right">
       <div class="chart3">
-        <BorderBox>
+        <BorderBox title="饼图">
           <div id="chart3"></div>
         </BorderBox>
       </div>
@@ -59,10 +62,12 @@
 
 <script>
 import BorderBox from "../../components/BorderBox";
+import DataBox from "../../components/DataBox";
 export default {
   name: "dashboard",
   components: {
-    BorderBox
+    BorderBox,
+    DataBox
   },
   data() {
     return {
@@ -1431,6 +1436,12 @@ export default {
         ]
       };
       myChart.setOption(option);
+      let sizeFun = function() {
+        myChart.resize();
+      };
+      setTimeout(() => {
+        window.addEventListener("resize", sizeFun);
+      }, 200);
       setInterval(() => {
         let rand = [];
         for (let i = 0; i < 7; i++) {
@@ -1444,10 +1455,65 @@ export default {
             }
           ]
         });
-        window.onresize = function() {
-          myChart.resize();
-        };
       }, 2000);
+    },
+    chart2() {
+      let myChart = this.$echarts.init(document.getElementById("chart3"));
+      let option = {
+        // title: {
+        //   text: "某站点用户访问来源",
+        //   subtext: "纯属虚构",
+        //   left: "center"
+        // },
+        animation: false,
+        color: ["#37a483", "#1e86db", "#c57587", "#FEF887", "#1BC5C3"],
+        tooltip: {
+          trigger: "item",
+          formatter: "{a} <br/>{b} : {c} ({d}%)"
+        },
+        legend: {
+          orient: "vertical",
+          left: "left",
+          data: ["类别1", "类别2", "类别3", "类别4", "类别5"],
+          textStyle: {
+            color: "#fff",
+            fontWeight: "bold",
+            fontFamily: "Microsoft YaHei"
+          }
+        },
+        series: [
+          {
+            name: "饼图",
+            type: "pie",
+            radius: "55%",
+            center: ["50%", "60%"],
+            label: {
+              fontWeight: "bolder"
+            },
+            data: [
+              { value: 335, name: "类别1" },
+              { value: 310, name: "类别2" },
+              { value: 234, name: "类别3" },
+              { value: 135, name: "类别4" },
+              { value: 1548, name: "类别5" }
+            ],
+            emphasis: {
+              itemStyle: {
+                shadowBlur: 10,
+                shadowOffsetX: 0,
+                shadowColor: "rgba(0, 0, 0, 0.5)"
+              }
+            }
+          }
+        ]
+      };
+      myChart.setOption(option);
+      let sizeFun = function() {
+        myChart.resize();
+      };
+      setTimeout(() => {
+        window.addEventListener("resize", sizeFun);
+      }, 200);
     }
   },
   mounted() {
@@ -1457,6 +1523,7 @@ export default {
       self.map.zoom = 17;
     }, 2000);
     this.chart1();
+    this.chart2();
   },
   created() {}
 };
@@ -1483,6 +1550,10 @@ export default {
       display: flex;
       justify-content: center;
       align-items: center;
+      .data {
+        display: block;
+        padding-top: 52px;
+      }
     }
     .chart2 {
       grid-area: chart2;
@@ -1502,9 +1573,10 @@ export default {
     border: 5px solid #2399ed;
     overflow: hidden;
     border-radius: 50px;
-    box-shadow: 2px 2px 10px 1px #111;
     margin: 5px;
     opacity: 0.8;
+    box-shadow: -8px -8px 10px -12px rgb(196, 242, 248),
+      8px 8px 10px -5px rgba(0, 0, 0, 1);
     .map {
       width: 100%;
       height: 100%;
