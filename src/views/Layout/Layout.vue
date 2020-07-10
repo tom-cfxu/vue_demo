@@ -18,7 +18,7 @@
           <router-link to="/home/alarm">
             <i class="el-icon-warning"></i>
             &emsp;
-            实时报警
+            报警日志
           </router-link>
           <router-link to="/home/assemble">
             <i class="el-icon-monitor"></i>

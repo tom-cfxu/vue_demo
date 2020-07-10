@@ -107,22 +107,26 @@ export default {
       let timeArr = [],
         dataArr = [];
       this.sockets.listener.subscribe("event2", data => {
-        timeArr.push(data.data.time);
-        dataArr.push(data.data.test);
-        if (timeArr.length > 100) {
-          timeArr.shift();
-          dataArr.shift();
+        if (data.data === undefined) {
+          return console.log("数据为空");
+        } else {
+          timeArr.push(data.data.time);
+          dataArr.push(data.data.test);
+          if (timeArr.length > 100) {
+            timeArr.shift();
+            dataArr.shift();
+          }
+          myChart.setOption({
+            xAxis: {
+              data: timeArr
+            },
+            series: [
+              {
+                data: dataArr
+              }
+            ]
+          });
         }
-        myChart.setOption({
-          xAxis: {
-            data: timeArr
-          },
-          series: [
-            {
-              data: dataArr
-            }
-          ]
-        });
       });
       let sizeFun = function() {
         myChart.resize();

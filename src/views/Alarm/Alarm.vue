@@ -241,8 +241,11 @@ export default {
   max-height: 100%;
   overflow: scroll;
   border-radius: 10px;
+  margin: 0;
 }
 .el-card {
+  width: 100%;
+  height: 100%;
   background: #3aa485; //linear-gradient(135deg, rgb(43, 109, 231), rgba(58, 164, 133));
   border: none;
   outline: none;

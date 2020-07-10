@@ -12,11 +12,19 @@ const routes = [
   {
     path: '/login',
     name: 'login',
-    component: () => import('@/views/Login/Login.vue')
+    component: () => import('@/views/Login/Login.vue'),
+    meta: {
+      title: '登录页',
+      keepAlive: true, // 需要被缓存
+    }
   },
   {
     path: '/home',
     component: () => import('@/views/Layout/Layout.vue'),
+    meta: {
+      title: '数据展示',
+      keepAlive: true, // 需要被缓存
+    },
     children: [
       {
         path: '/',
@@ -27,7 +35,7 @@ const routes = [
         name: 'dashboard',
         component: () => import('@/views/Dashboard/Dashboard.vue'),
         meta: {
-          title: "首页",
+          title: "数据展示",
           tx: 1
         }
       },
@@ -45,7 +53,7 @@ const routes = [
         name: 'alarm',
         component: () => import('@/views/Alarm/Alarm.vue'),
         meta: {
-          title: "报警",
+          title: "报警日志",
           tx: 3
         }
       },
@@ -54,7 +62,7 @@ const routes = [
         name: 'assemble',
         component: () => import('@/views/Assemble/Assemble.vue'),
         meta: {
-          title: "组态监测",
+          title: "组态监控",
           tx: 4
         }
       },
