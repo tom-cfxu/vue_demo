@@ -18,7 +18,7 @@
           <router-link to="/home/alarm">
             <i class="el-icon-warning"></i>
             &emsp;
-            报警日志
+            实时数据
           </router-link>
           <router-link to="/home/assemble">
             <i class="el-icon-monitor"></i>
@@ -30,7 +30,7 @@
         <!-- <el-avatar :src="avatarUrl"></el-avatar> -->
         <el-dropdown @command="handleCommand" size="mini" trigger="click">
           <span class="el-dropdown-link username">
-            admin
+            {{username}}
             <i class="el-icon-arrow-down el-icon--right"></i>
           </span>
           <el-dropdown-menu slot="dropdown">
@@ -56,7 +56,8 @@ export default {
   name: "Layout",
   data() {
     return {
-      SkipSwitchName: ""
+      SkipSwitchName: "",
+      username: "",
     };
   },
   watch: {
@@ -66,24 +67,29 @@ export default {
       } else {
         this.SkipSwitchName = "Skleft";
       }
-    }
+    },
   },
   methods: {
     handleCommand(e) {
       switch (e) {
         case "logout":
           this.$router.push({ path: "/" });
+          localStorage.removeItem("token");
+          localStorage.removeItem("username");
           this.$message({
             message: `注销成功!`,
             type: "info",
-            center: true
+            center: true,
           });
           break;
         case "user-center":
           this.$router.push({ path: "/home/usercenter" });
       }
-    }
-  }
+    },
+  },
+  created() {
+    this.username = localStorage.getItem("username");
+  },
 };
 </script>
  <style lang="less">

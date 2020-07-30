@@ -67,7 +67,7 @@ export default {
   name: "dashboard",
   components: {
     BorderBox,
-    DataBox
+    DataBox,
   },
   data() {
     return {
@@ -84,191 +84,191 @@ export default {
               elementType: "geometry",
               stylers: {
                 color: "#104390ff",
-                visibility: "on"
-              }
+                visibility: "on",
+              },
             },
             {
               featureType: "water",
               elementType: "labels.text.fill",
               stylers: {
                 color: "#104390ff",
-                visibility: "on"
-              }
+                visibility: "on",
+              },
             },
             {
               featureType: "building",
               elementType: "geometry.fill",
               stylers: {
                 color: "#053781ff",
-                visibility: "on"
-              }
+                visibility: "on",
+              },
             },
             {
               featureType: "building",
               elementType: "geometry.stroke",
               stylers: {
                 color: "#002568ff",
-                visibility: "on"
-              }
+                visibility: "on",
+              },
             },
             {
               featureType: "water",
               elementType: "geometry",
               stylers: {
                 color: "#ade1f5ff",
-                visibility: "on"
-              }
+                visibility: "on",
+              },
             },
             {
               featureType: "village",
               elementType: "labels",
               stylers: {
-                visibility: "off"
-              }
+                visibility: "off",
+              },
             },
             {
               featureType: "town",
               elementType: "labels",
               stylers: {
-                visibility: "off"
-              }
+                visibility: "off",
+              },
             },
             {
               featureType: "district",
               elementType: "labels",
               stylers: {
-                visibility: "off"
-              }
+                visibility: "off",
+              },
             },
             {
               featureType: "country",
               elementType: "labels.text.fill",
               stylers: {
                 color: "#ade1f5ff",
-                visibility: "on"
-              }
+                visibility: "on",
+              },
             },
             {
               featureType: "city",
               elementType: "labels.text.fill",
               stylers: {
                 color: "#ade1f5ff",
-                visibility: "on"
-              }
+                visibility: "on",
+              },
             },
             {
               featureType: "continent",
               elementType: "labels.text.fill",
               stylers: {
                 color: "#ade1f5ff",
-                visibility: "on"
-              }
+                visibility: "on",
+              },
             },
             {
               featureType: "poilabel",
               elementType: "labels",
               stylers: {
-                visibility: "on"
-              }
+                visibility: "on",
+              },
             },
             {
               featureType: "poilabel",
               elementType: "labels.icon",
               stylers: {
-                visibility: "on"
-              }
+                visibility: "on",
+              },
             },
             {
               featureType: "scenicspotslabel",
               elementType: "labels.icon",
               stylers: {
-                visibility: "off"
-              }
+                visibility: "off",
+              },
             },
             {
               featureType: "scenicspotslabel",
               elementType: "labels.text.fill",
               stylers: {
                 color: "#ade1f5ff",
-                visibility: "on"
-              }
+                visibility: "on",
+              },
             },
             {
               featureType: "transportationlabel",
               elementType: "labels.text.fill",
               stylers: {
                 color: "#ade1f5ff",
-                visibility: "on"
-              }
+                visibility: "on",
+              },
             },
             {
               featureType: "transportationlabel",
               elementType: "labels.icon",
               stylers: {
-                visibility: "off"
-              }
+                visibility: "off",
+              },
             },
             {
               featureType: "airportlabel",
               elementType: "labels.text.fill",
               stylers: {
                 color: "#ade1f5ff",
-                visibility: "on"
-              }
+                visibility: "on",
+              },
             },
             {
               featureType: "airportlabel",
               elementType: "labels.icon",
               stylers: {
-                visibility: "off"
-              }
+                visibility: "off",
+              },
             },
             {
               featureType: "road",
               elementType: "geometry.fill",
               stylers: {
                 color: "#2399edff",
-                visibility: "on"
-              }
+                visibility: "on",
+              },
             },
             {
               featureType: "road",
               elementType: "geometry.stroke",
               stylers: {
                 color: "#0576c5ff",
-                visibility: "on"
-              }
+                visibility: "on",
+              },
             },
             {
               featureType: "road",
               elementType: "geometry",
               stylers: {
-                weight: 3
-              }
+                weight: 3,
+              },
             },
             {
               featureType: "green",
               elementType: "geometry",
               stylers: {
                 color: "#37a383ff",
-                visibility: "on"
-              }
+                visibility: "on",
+              },
             },
             {
               featureType: "scenicspots",
               elementType: "geometry",
               stylers: {
                 color: "#104390ff",
-                visibility: "on"
-              }
+                visibility: "on",
+              },
             },
             {
               featureType: "scenicspots",
               elementType: "labels.text.fill",
               stylers: {
                 color: "#ade1f5ff",
-                visibility: "on"
-              }
+                visibility: "on",
+              },
             },
             {
               featureType: "scenicspots",
@@ -276,8 +276,8 @@ export default {
               stylers: {
                 weight: 1,
                 color: "#646363ff",
-                visibility: "on"
-              }
+                visibility: "on",
+              },
             },
             {
               featureType: "continent",
@@ -285,8 +285,8 @@ export default {
               stylers: {
                 color: "#646363ff",
                 visibility: "on",
-                weight: 1
-              }
+                weight: 1,
+              },
             },
             {
               featureType: "country",
@@ -294,8 +294,8 @@ export default {
               stylers: {
                 color: "#646363ff",
                 visibility: "on",
-                weight: 1
-              }
+                weight: 1,
+              },
             },
             {
               featureType: "city",
@@ -303,15 +303,15 @@ export default {
               stylers: {
                 color: "#646363ff",
                 visibility: "on",
-                weight: 1
-              }
+                weight: 1,
+              },
             },
             {
               featureType: "city",
               elementType: "labels.icon",
               stylers: {
-                visibility: "off"
-              }
+                visibility: "off",
+              },
             },
             {
               featureType: "scenicspotslabel",
@@ -319,8 +319,8 @@ export default {
               stylers: {
                 color: "#646363ff",
                 visibility: "on",
-                weight: 1
-              }
+                weight: 1,
+              },
             },
             {
               featureType: "airportlabel",
@@ -328,8 +328,8 @@ export default {
               stylers: {
                 color: "#646363ff",
                 visibility: "on",
-                weight: 1
-              }
+                weight: 1,
+              },
             },
             {
               featureType: "transportationlabel",
@@ -337,85 +337,85 @@ export default {
               stylers: {
                 color: "#646363ff",
                 visibility: "on",
-                weight: 1
-              }
+                weight: 1,
+              },
             },
             {
               featureType: "railway",
               elementType: "geometry",
               stylers: {
-                visibility: "off"
-              }
+                visibility: "off",
+              },
             },
             {
               featureType: "subway",
               elementType: "geometry",
               stylers: {
-                visibility: "off"
-              }
+                visibility: "off",
+              },
             },
             {
               featureType: "highwaysign",
               elementType: "labels",
               stylers: {
-                visibility: "off"
-              }
+                visibility: "off",
+              },
             },
             {
               featureType: "nationalwaysign",
               elementType: "labels",
               stylers: {
-                visibility: "off"
-              }
+                visibility: "off",
+              },
             },
             {
               featureType: "nationalwaysign",
               elementType: "labels.icon",
               stylers: {
-                visibility: "off"
-              }
+                visibility: "off",
+              },
             },
             {
               featureType: "provincialwaysign",
               elementType: "labels",
               stylers: {
-                visibility: "off"
-              }
+                visibility: "off",
+              },
             },
             {
               featureType: "provincialwaysign",
               elementType: "labels.icon",
               stylers: {
-                visibility: "off"
-              }
+                visibility: "off",
+              },
             },
             {
               featureType: "tertiarywaysign",
               elementType: "labels",
               stylers: {
-                visibility: "off"
-              }
+                visibility: "off",
+              },
             },
             {
               featureType: "tertiarywaysign",
               elementType: "labels.icon",
               stylers: {
-                visibility: "off"
-              }
+                visibility: "off",
+              },
             },
             {
               featureType: "subwaylabel",
               elementType: "labels",
               stylers: {
-                visibility: "off"
-              }
+                visibility: "off",
+              },
             },
             {
               featureType: "subwaylabel",
               elementType: "labels.icon",
               stylers: {
-                visibility: "off"
-              }
+                visibility: "off",
+              },
             },
             {
               featureType: "road",
@@ -423,8 +423,8 @@ export default {
               stylers: {
                 color: "#ade1f5ff",
                 visibility: "on",
-                weight: 90
-              }
+                weight: 90,
+              },
             },
             {
               featureType: "road",
@@ -432,100 +432,90 @@ export default {
               stylers: {
                 color: "#646363ff",
                 visibility: "on",
-                weight: 1
-              }
+                weight: 1,
+              },
             },
             {
               featureType: "shopping",
               elementType: "geometry",
               stylers: {
-                visibility: "off"
-              }
+                visibility: "off",
+              },
             },
             {
               featureType: "scenicspots",
               elementType: "labels",
               stylers: {
-                visibility: "on"
-              }
+                visibility: "on",
+              },
             },
             {
               featureType: "scenicspotslabel",
               elementType: "labels",
               stylers: {
-                visibility: "off"
-              }
+                visibility: "off",
+              },
             },
             {
               featureType: "manmade",
               elementType: "geometry",
               stylers: {
-                visibility: "off"
-              }
+                visibility: "off",
+              },
             },
             {
               featureType: "manmade",
               elementType: "labels",
               stylers: {
-                visibility: "off"
-              }
+                visibility: "off",
+              },
             },
             {
               featureType: "highwaysign",
               elementType: "labels.icon",
               stylers: {
-                visibility: "off"
-              }
+                visibility: "off",
+              },
             },
             {
               featureType: "water",
               elementType: "labels.text.stroke",
               stylers: {
                 color: "#37a38300",
-                visibility: "on"
-              }
+                visibility: "on",
+              },
             },
             {
               featureType: "road",
               stylers: {
                 curZoomRegionId: "0",
                 curZoomRegion: "6,9",
-                level: "6"
-              }
+                level: "6",
+              },
             },
             {
               featureType: "road",
               stylers: {
                 curZoomRegionId: "0",
                 curZoomRegion: "6,9",
-                level: "7"
-              }
+                level: "7",
+              },
             },
             {
               featureType: "road",
               stylers: {
                 curZoomRegionId: "0",
                 curZoomRegion: "6,9",
-                level: "8"
-              }
+                level: "8",
+              },
             },
             {
               featureType: "road",
               stylers: {
                 curZoomRegionId: "0",
                 curZoomRegion: "6,9",
-                level: "9"
-              }
-            },
-            {
-              featureType: "road",
-              elementType: "geometry",
-              stylers: {
-                visibility: "off",
-                curZoomRegionId: "0",
-                curZoomRegion: "6,9",
-                level: "6"
-              }
+                level: "9",
+              },
             },
             {
               featureType: "road",
@@ -534,8 +524,8 @@ export default {
                 visibility: "off",
                 curZoomRegionId: "0",
                 curZoomRegion: "6,9",
-                level: "7"
-              }
+                level: "6",
+              },
             },
             {
               featureType: "road",
@@ -544,8 +534,8 @@ export default {
                 visibility: "off",
                 curZoomRegionId: "0",
                 curZoomRegion: "6,9",
-                level: "8"
-              }
+                level: "7",
+              },
             },
             {
               featureType: "road",
@@ -554,8 +544,18 @@ export default {
                 visibility: "off",
                 curZoomRegionId: "0",
                 curZoomRegion: "6,9",
-                level: "9"
-              }
+                level: "8",
+              },
+            },
+            {
+              featureType: "road",
+              elementType: "geometry",
+              stylers: {
+                visibility: "off",
+                curZoomRegionId: "0",
+                curZoomRegion: "6,9",
+                level: "9",
+              },
             },
             {
               featureType: "road",
@@ -564,8 +564,8 @@ export default {
                 visibility: "off",
                 curZoomRegionId: "0",
                 curZoomRegion: "6,9",
-                level: "6"
-              }
+                level: "6",
+              },
             },
             {
               featureType: "road",
@@ -574,8 +574,8 @@ export default {
                 visibility: "off",
                 curZoomRegionId: "0",
                 curZoomRegion: "6,9",
-                level: "7"
-              }
+                level: "7",
+              },
             },
             {
               featureType: "road",
@@ -584,8 +584,8 @@ export default {
                 visibility: "off",
                 curZoomRegionId: "0",
                 curZoomRegion: "6,9",
-                level: "8"
-              }
+                level: "8",
+              },
             },
             {
               featureType: "road",
@@ -594,15 +594,15 @@ export default {
                 visibility: "off",
                 curZoomRegionId: "0",
                 curZoomRegion: "6,9",
-                level: "9"
-              }
+                level: "9",
+              },
             },
             {
               featureType: "road",
               elementType: "labels.text",
               stylers: {
-                fontsize: 24
-              }
+                fontsize: 24,
+              },
             },
             {
               featureType: "highway",
@@ -610,61 +610,61 @@ export default {
               stylers: {
                 color: "#646363ff",
                 visibility: "on",
-                weight: 1
-              }
+                weight: 1,
+              },
             },
             {
               featureType: "highway",
               elementType: "geometry.fill",
               stylers: {
                 color: "#2399edff",
-                visibility: "on"
-              }
+                visibility: "on",
+              },
             },
             {
               featureType: "highway",
               elementType: "geometry.stroke",
               stylers: {
-                color: "#1c4f7eff"
-              }
+                color: "#1c4f7eff",
+              },
             },
             {
               featureType: "highway",
               elementType: "labels.text.fill",
               stylers: {
                 color: "#ade1f5ff",
-                visibility: "on"
-              }
+                visibility: "on",
+              },
             },
             {
               featureType: "highway",
               elementType: "geometry",
               stylers: {
-                weight: 3
-              }
+                weight: 3,
+              },
             },
             {
               featureType: "nationalway",
               elementType: "geometry.fill",
               stylers: {
                 color: "#2399edff",
-                visibility: "on"
-              }
+                visibility: "on",
+              },
             },
             {
               featureType: "nationalway",
               elementType: "geometry.stroke",
               stylers: {
-                color: "#1c4f7eff"
-              }
+                color: "#1c4f7eff",
+              },
             },
             {
               featureType: "nationalway",
               elementType: "labels.text.fill",
               stylers: {
                 color: "#ade1f5ff",
-                visibility: "on"
-              }
+                visibility: "on",
+              },
             },
             {
               featureType: "nationalway",
@@ -672,119 +672,119 @@ export default {
               stylers: {
                 color: "#646363ff",
                 visibility: "on",
-                weight: 1
-              }
+                weight: 1,
+              },
             },
             {
               featureType: "nationalway",
               elementType: "geometry",
               stylers: {
-                weight: 3
-              }
+                weight: 3,
+              },
             },
             {
               featureType: "provincialway",
               elementType: "geometry.fill",
               stylers: {
                 color: "#2399edff",
-                visibility: "on"
-              }
+                visibility: "on",
+              },
             },
             {
               featureType: "cityhighway",
               elementType: "geometry.fill",
               stylers: {
                 color: "#2399edff",
-                visibility: "on"
-              }
+                visibility: "on",
+              },
             },
             {
               featureType: "arterial",
               elementType: "geometry.fill",
               stylers: {
                 color: "#2399edff",
-                visibility: "on"
-              }
+                visibility: "on",
+              },
             },
             {
               featureType: "tertiaryway",
               elementType: "geometry.fill",
               stylers: {
                 color: "#2399edff",
-                visibility: "on"
-              }
+                visibility: "on",
+              },
             },
             {
               featureType: "fourlevelway",
               elementType: "geometry.fill",
               stylers: {
                 color: "#2399edff",
-                visibility: "on"
-              }
+                visibility: "on",
+              },
             },
             {
               featureType: "local",
               elementType: "geometry.fill",
               stylers: {
                 color: "#2399edff",
-                visibility: "on"
-              }
+                visibility: "on",
+              },
             },
             {
               featureType: "provincialway",
               elementType: "geometry.stroke",
               stylers: {
                 color: "#0576c5ff",
-                visibility: "on"
-              }
+                visibility: "on",
+              },
             },
             {
               featureType: "cityhighway",
               elementType: "geometry.stroke",
               stylers: {
                 color: "#0576c5ff",
-                visibility: "on"
-              }
+                visibility: "on",
+              },
             },
             {
               featureType: "arterial",
               elementType: "geometry.stroke",
               stylers: {
                 color: "#0576c5ff",
-                visibility: "on"
-              }
+                visibility: "on",
+              },
             },
             {
               featureType: "tertiaryway",
               elementType: "geometry.stroke",
               stylers: {
                 color: "#0576c5ff",
-                visibility: "on"
-              }
+                visibility: "on",
+              },
             },
             {
               featureType: "fourlevelway",
               elementType: "geometry.stroke",
               stylers: {
                 color: "#0576c5ff",
-                visibility: "on"
-              }
+                visibility: "on",
+              },
             },
             {
               featureType: "local",
               elementType: "geometry.stroke",
               stylers: {
                 color: "#0576c5ff",
-                visibility: "on"
-              }
+                visibility: "on",
+              },
             },
             {
               featureType: "local",
               elementType: "labels.text.fill",
               stylers: {
                 color: "#ade1f5ff",
-                visibility: "on"
-              }
+                visibility: "on",
+              },
             },
             {
               featureType: "local",
@@ -792,48 +792,48 @@ export default {
               stylers: {
                 color: "#646363ff",
                 visibility: "on",
-                weight: 1
-              }
+                weight: 1,
+              },
             },
             {
               featureType: "fourlevelway",
               elementType: "labels.text.fill",
               stylers: {
                 color: "#ade1f5ff",
-                visibility: "on"
-              }
+                visibility: "on",
+              },
             },
             {
               featureType: "tertiaryway",
               elementType: "labels.text.fill",
               stylers: {
                 color: "#ade1f5ff",
-                visibility: "on"
-              }
+                visibility: "on",
+              },
             },
             {
               featureType: "arterial",
               elementType: "labels.text.fill",
               stylers: {
                 color: "#ade1f5ff",
-                visibility: "on"
-              }
+                visibility: "on",
+              },
             },
             {
               featureType: "cityhighway",
               elementType: "labels.text.fill",
               stylers: {
                 color: "#ade1f5ff",
-                visibility: "on"
-              }
+                visibility: "on",
+              },
             },
             {
               featureType: "provincialway",
               elementType: "labels.text.fill",
               stylers: {
                 color: "#ade1f5ff",
-                visibility: "on"
-              }
+                visibility: "on",
+              },
             },
             {
               featureType: "provincialway",
@@ -841,8 +841,8 @@ export default {
               stylers: {
                 color: "#646363ff",
                 visibility: "on",
-                weight: 1
-              }
+                weight: 1,
+              },
             },
             {
               featureType: "cityhighway",
@@ -850,8 +850,8 @@ export default {
               stylers: {
                 color: "#646363ff",
                 visibility: "on",
-                weight: 1
-              }
+                weight: 1,
+              },
             },
             {
               featureType: "arterial",
@@ -859,8 +859,8 @@ export default {
               stylers: {
                 color: "#646363ff",
                 visibility: "on",
-                weight: 1
-              }
+                weight: 1,
+              },
             },
             {
               featureType: "tertiaryway",
@@ -868,8 +868,8 @@ export default {
               stylers: {
                 color: "#646363ff",
                 visibility: "on",
-                weight: 1
-              }
+                weight: 1,
+              },
             },
             {
               featureType: "fourlevelway",
@@ -877,92 +877,82 @@ export default {
               stylers: {
                 color: "#646363ff",
                 visibility: "on",
-                weight: 1
-              }
+                weight: 1,
+              },
             },
             {
               featureType: "fourlevelway",
               elementType: "geometry",
               stylers: {
-                weight: 1
-              }
+                weight: 1,
+              },
             },
             {
               featureType: "tertiaryway",
               elementType: "geometry",
               stylers: {
-                weight: 1
-              }
+                weight: 1,
+              },
             },
             {
               featureType: "local",
               elementType: "geometry",
               stylers: {
-                weight: 1
-              }
+                weight: 1,
+              },
             },
             {
               featureType: "provincialway",
               elementType: "geometry",
               stylers: {
-                weight: 3
-              }
+                weight: 3,
+              },
             },
             {
               featureType: "cityhighway",
               elementType: "geometry",
               stylers: {
-                weight: 3
-              }
+                weight: 3,
+              },
             },
             {
               featureType: "arterial",
               elementType: "geometry",
               stylers: {
-                weight: 3
-              }
+                weight: 3,
+              },
             },
             {
               featureType: "highway",
               stylers: {
                 curZoomRegionId: "0",
                 curZoomRegion: "6,9",
-                level: "6"
-              }
+                level: "6",
+              },
             },
             {
               featureType: "highway",
               stylers: {
                 curZoomRegionId: "0",
                 curZoomRegion: "6,9",
-                level: "7"
-              }
+                level: "7",
+              },
             },
             {
               featureType: "highway",
               stylers: {
                 curZoomRegionId: "0",
                 curZoomRegion: "6,9",
-                level: "8"
-              }
+                level: "8",
+              },
             },
             {
               featureType: "highway",
               stylers: {
                 curZoomRegionId: "0",
                 curZoomRegion: "6,9",
-                level: "9"
-              }
-            },
-            {
-              featureType: "highway",
-              elementType: "geometry",
-              stylers: {
-                visibility: "off",
-                curZoomRegionId: "0",
-                curZoomRegion: "6,9",
-                level: "6"
-              }
+                level: "9",
+              },
             },
             {
               featureType: "highway",
@@ -971,8 +961,8 @@ export default {
                 visibility: "off",
                 curZoomRegionId: "0",
                 curZoomRegion: "6,9",
-                level: "7"
-              }
+                level: "6",
+              },
             },
             {
               featureType: "highway",
@@ -981,8 +971,8 @@ export default {
                 visibility: "off",
                 curZoomRegionId: "0",
                 curZoomRegion: "6,9",
-                level: "8"
-              }
+                level: "7",
+              },
             },
             {
               featureType: "highway",
@@ -991,8 +981,18 @@ export default {
                 visibility: "off",
                 curZoomRegionId: "0",
                 curZoomRegion: "6,9",
-                level: "9"
-              }
+                level: "8",
+              },
+            },
+            {
+              featureType: "highway",
+              elementType: "geometry",
+              stylers: {
+                visibility: "off",
+                curZoomRegionId: "0",
+                curZoomRegion: "6,9",
+                level: "9",
+              },
             },
             {
               featureType: "highway",
@@ -1001,8 +1001,8 @@ export default {
                 visibility: "off",
                 curZoomRegionId: "0",
                 curZoomRegion: "6,9",
-                level: "6"
-              }
+                level: "6",
+              },
             },
             {
               featureType: "highway",
@@ -1011,8 +1011,8 @@ export default {
                 visibility: "off",
                 curZoomRegionId: "0",
                 curZoomRegion: "6,9",
-                level: "7"
-              }
+                level: "7",
+              },
             },
             {
               featureType: "highway",
@@ -1021,8 +1021,8 @@ export default {
                 visibility: "off",
                 curZoomRegionId: "0",
                 curZoomRegion: "6,9",
-                level: "8"
-              }
+                level: "8",
+              },
             },
             {
               featureType: "highway",
@@ -1031,50 +1031,40 @@ export default {
                 visibility: "off",
                 curZoomRegionId: "0",
                 curZoomRegion: "6,9",
-                level: "9"
-              }
+                level: "9",
+              },
             },
             {
               featureType: "nationalway",
               stylers: {
                 curZoomRegionId: "0",
                 curZoomRegion: "6,9",
-                level: "6"
-              }
+                level: "6",
+              },
             },
             {
               featureType: "nationalway",
               stylers: {
                 curZoomRegionId: "0",
                 curZoomRegion: "6,9",
-                level: "7"
-              }
+                level: "7",
+              },
             },
             {
               featureType: "nationalway",
               stylers: {
                 curZoomRegionId: "0",
                 curZoomRegion: "6,9",
-                level: "8"
-              }
+                level: "8",
+              },
             },
             {
               featureType: "nationalway",
               stylers: {
                 curZoomRegionId: "0",
                 curZoomRegion: "6,9",
-                level: "9"
-              }
-            },
-            {
-              featureType: "nationalway",
-              elementType: "geometry",
-              stylers: {
-                visibility: "off",
-                curZoomRegionId: "0",
-                curZoomRegion: "6,9",
-                level: "6"
-              }
+                level: "9",
+              },
             },
             {
               featureType: "nationalway",
@@ -1083,8 +1073,8 @@ export default {
                 visibility: "off",
                 curZoomRegionId: "0",
                 curZoomRegion: "6,9",
-                level: "7"
-              }
+                level: "6",
+              },
             },
             {
               featureType: "nationalway",
@@ -1093,8 +1083,8 @@ export default {
                 visibility: "off",
                 curZoomRegionId: "0",
                 curZoomRegion: "6,9",
-                level: "8"
-              }
+                level: "7",
+              },
             },
             {
               featureType: "nationalway",
@@ -1103,8 +1093,18 @@ export default {
                 visibility: "off",
                 curZoomRegionId: "0",
                 curZoomRegion: "6,9",
-                level: "9"
-              }
+                level: "8",
+              },
+            },
+            {
+              featureType: "nationalway",
+              elementType: "geometry",
+              stylers: {
+                visibility: "off",
+                curZoomRegionId: "0",
+                curZoomRegion: "6,9",
+                level: "9",
+              },
             },
             {
               featureType: "nationalway",
@@ -1113,8 +1113,8 @@ export default {
                 visibility: "off",
                 curZoomRegionId: "0",
                 curZoomRegion: "6,9",
-                level: "6"
-              }
+                level: "6",
+              },
             },
             {
               featureType: "nationalway",
@@ -1123,8 +1123,8 @@ export default {
                 visibility: "off",
                 curZoomRegionId: "0",
                 curZoomRegion: "6,9",
-                level: "7"
-              }
+                level: "7",
+              },
             },
             {
               featureType: "nationalway",
@@ -1133,8 +1133,8 @@ export default {
                 visibility: "off",
                 curZoomRegionId: "0",
                 curZoomRegion: "6,9",
-                level: "8"
-              }
+                level: "8",
+              },
             },
             {
               featureType: "nationalway",
@@ -1143,34 +1143,24 @@ export default {
                 visibility: "off",
                 curZoomRegionId: "0",
                 curZoomRegion: "6,9",
-                level: "9"
-              }
+                level: "9",
+              },
             },
             {
               featureType: "provincialway",
               stylers: {
                 curZoomRegionId: "0",
                 curZoomRegion: "8,10",
-                level: "8"
-              }
+                level: "8",
+              },
             },
             {
               featureType: "provincialway",
               stylers: {
                 curZoomRegionId: "0",
                 curZoomRegion: "8,10",
-                level: "9"
-              }
-            },
-            {
-              featureType: "provincialway",
-              elementType: "geometry",
-              stylers: {
-                visibility: "off",
-                curZoomRegionId: "0",
-                curZoomRegion: "8,10",
-                level: "8"
-              }
+                level: "9",
+              },
             },
             {
               featureType: "provincialway",
@@ -1179,8 +1169,18 @@ export default {
                 visibility: "off",
                 curZoomRegionId: "0",
                 curZoomRegion: "8,10",
-                level: "9"
-              }
+                level: "8",
+              },
+            },
+            {
+              featureType: "provincialway",
+              elementType: "geometry",
+              stylers: {
+                visibility: "off",
+                curZoomRegionId: "0",
+                curZoomRegion: "8,10",
+                level: "9",
+              },
             },
             {
               featureType: "provincialway",
@@ -1189,8 +1189,8 @@ export default {
                 visibility: "off",
                 curZoomRegionId: "0",
                 curZoomRegion: "8,10",
-                level: "8"
-              }
+                level: "8",
+              },
             },
             {
               featureType: "provincialway",
@@ -1199,50 +1199,40 @@ export default {
                 visibility: "off",
                 curZoomRegionId: "0",
                 curZoomRegion: "8,10",
-                level: "9"
-              }
+                level: "9",
+              },
             },
             {
               featureType: "cityhighway",
               stylers: {
                 curZoomRegionId: "0",
                 curZoomRegion: "6,9",
-                level: "6"
-              }
+                level: "6",
+              },
             },
             {
               featureType: "cityhighway",
               stylers: {
                 curZoomRegionId: "0",
                 curZoomRegion: "6,9",
-                level: "7"
-              }
+                level: "7",
+              },
             },
             {
               featureType: "cityhighway",
               stylers: {
                 curZoomRegionId: "0",
                 curZoomRegion: "6,9",
-                level: "8"
-              }
+                level: "8",
+              },
             },
             {
               featureType: "cityhighway",
               stylers: {
                 curZoomRegionId: "0",
                 curZoomRegion: "6,9",
-                level: "9"
-              }
-            },
-            {
-              featureType: "cityhighway",
-              elementType: "geometry",
-              stylers: {
-                visibility: "off",
-                curZoomRegionId: "0",
-                curZoomRegion: "6,9",
-                level: "6"
-              }
+                level: "9",
+              },
             },
             {
               featureType: "cityhighway",
@@ -1251,8 +1241,8 @@ export default {
                 visibility: "off",
                 curZoomRegionId: "0",
                 curZoomRegion: "6,9",
-                level: "7"
-              }
+                level: "6",
+              },
             },
             {
               featureType: "cityhighway",
@@ -1261,8 +1251,8 @@ export default {
                 visibility: "off",
                 curZoomRegionId: "0",
                 curZoomRegion: "6,9",
-                level: "8"
-              }
+                level: "7",
+              },
             },
             {
               featureType: "cityhighway",
@@ -1271,8 +1261,18 @@ export default {
                 visibility: "off",
                 curZoomRegionId: "0",
                 curZoomRegion: "6,9",
-                level: "9"
-              }
+                level: "8",
+              },
+            },
+            {
+              featureType: "cityhighway",
+              elementType: "geometry",
+              stylers: {
+                visibility: "off",
+                curZoomRegionId: "0",
+                curZoomRegion: "6,9",
+                level: "9",
+              },
             },
             {
               featureType: "cityhighway",
@@ -1281,8 +1281,8 @@ export default {
                 visibility: "off",
                 curZoomRegionId: "0",
                 curZoomRegion: "6,9",
-                level: "6"
-              }
+                level: "6",
+              },
             },
             {
               featureType: "cityhighway",
@@ -1291,8 +1291,8 @@ export default {
                 visibility: "off",
                 curZoomRegionId: "0",
                 curZoomRegion: "6,9",
-                level: "7"
-              }
+                level: "7",
+              },
             },
             {
               featureType: "cityhighway",
@@ -1301,8 +1301,8 @@ export default {
                 visibility: "off",
                 curZoomRegionId: "0",
                 curZoomRegion: "6,9",
-                level: "8"
-              }
+                level: "8",
+              },
             },
             {
               featureType: "cityhighway",
@@ -1311,16 +1311,16 @@ export default {
                 visibility: "off",
                 curZoomRegionId: "0",
                 curZoomRegion: "6,9",
-                level: "9"
-              }
+                level: "9",
+              },
             },
             {
               featureType: "arterial",
               stylers: {
                 curZoomRegionId: "0",
                 curZoomRegion: "9,9",
-                level: "9"
-              }
+                level: "9",
+              },
             },
             {
               featureType: "arterial",
@@ -1329,8 +1329,8 @@ export default {
                 visibility: "off",
                 curZoomRegionId: "0",
                 curZoomRegion: "9,9",
-                level: "9"
-              }
+                level: "9",
+              },
             },
             {
               featureType: "arterial",
@@ -1339,20 +1339,22 @@ export default {
                 visibility: "off",
                 curZoomRegionId: "0",
                 curZoomRegion: "9,9",
-                level: "9"
-              }
-            }
-          ]
-        }
-      }
+                level: "9",
+              },
+            },
+          ],
+        },
+      },
     };
   },
   methods: {
     infoWindowClose() {
-      this.map.show = false;
+      // this.map.show = false;
     },
     infoWindowOpen() {
       this.map.show = true;
+      this.map.center = this.map.marker;
+      this.map.zoom = 17;
     },
     // eslint-disable-next-line no-unused-vars
     handler({ BMap, map }) {
@@ -1363,9 +1365,9 @@ export default {
       map.enableScrollWheelZoom(true);
 
       // 点击事件获取经纬度
-      map.addEventListener("click", function(e) {
-        console.log(e.point.lng, e.point.lat);
-      });
+      // map.addEventListener("click", function (e) {
+      //   console.log(e.point.lng, e.point.lat);
+      // });
     },
     chart1() {
       let myChart = this.$echarts.init(document.getElementById("chart2"));
@@ -1376,44 +1378,44 @@ export default {
         tooltip: {
           trigger: "axis",
           axisPointer: {
-            type: "shadow"
-          }
+            type: "shadow",
+          },
         },
         grid: {
           bottom: "15%",
           left: "15%",
-          top: "20%"
+          top: "20%",
         },
         xAxis: {
           data: ["设备1", "设备2", "设备3", "设备4", "设备5", "设备6", "设备7"],
           axisLine: {
             lineStyle: {
-              color: lineColor
-            }
+              color: lineColor,
+            },
           },
           axisTick: {
-            show: false
+            show: false,
           },
           axisLabel: {
             inside: false,
             textStyle: {
-              itemSize: ""
-            }
-          }
+              itemSize: "",
+            },
+          },
         },
         yAxis: {
           type: "value",
           splitLine: {
-            show: false
+            show: false,
           },
           axisTick: {
-            show: false
+            show: false,
           },
           axisLine: {
             lineStyle: {
-              color: lineColor
-            }
-          }
+              color: lineColor,
+            },
+          },
         },
         series: [
           {
@@ -1421,22 +1423,22 @@ export default {
             type: "bar",
             data: [24, 10, 20, 10, 10, 20, 30],
             backgroundStyle: {
-              color: "rgba(220, 220, 220, 0.5)"
+              color: "rgba(220, 220, 220, 0.5)",
             },
             itemStyle: {
               barBorderRadius: [5, 5, 0, 0],
               color: new this.$echarts.graphic.LinearGradient(0, 0, 1, 1, [
                 { offset: 0, color: "#54F5C2" },
-                { offset: 0.6, color: "#1f82d3" }
-              ])
+                { offset: 0.6, color: "#1f82d3" },
+              ]),
             },
 
-            showBackground: false
-          }
-        ]
+            showBackground: false,
+          },
+        ],
       };
       myChart.setOption(option);
-      let sizeFun = function() {
+      let sizeFun = function () {
         myChart.resize();
       };
       setTimeout(() => {
@@ -1451,9 +1453,9 @@ export default {
         myChart.setOption({
           series: [
             {
-              data: rand
-            }
-          ]
+              data: rand,
+            },
+          ],
         });
       }, 2000);
     },
@@ -1464,7 +1466,7 @@ export default {
         color: ["#37a483", "#1e86db", "#c57587", "#FEF887", "#1BC5C3"],
         tooltip: {
           trigger: "item",
-          formatter: "{a} <br/>{b} : {c} ({d}%)"
+          formatter: "{a} <br/>{b} : {c} ({d}%)",
         },
         legend: {
           orient: "vertical",
@@ -1473,8 +1475,8 @@ export default {
           textStyle: {
             color: "#fff",
             fontWeight: "bold",
-            fontFamily: "Microsoft YaHei"
-          }
+            fontFamily: "Microsoft YaHei",
+          },
         },
         series: [
           {
@@ -1483,27 +1485,27 @@ export default {
             radius: "55%",
             center: ["50%", "60%"],
             label: {
-              fontWeight: "bolder"
+              fontWeight: "bolder",
             },
             data: [
               { value: 335, name: "类别1" },
               { value: 310, name: "类别2" },
               { value: 234, name: "类别3" },
               { value: 135, name: "类别4" },
-              { value: 1548, name: "类别5" }
+              { value: 1548, name: "类别5" },
             ],
             emphasis: {
               itemStyle: {
                 shadowBlur: 10,
                 shadowOffsetX: 0,
-                shadowColor: "rgba(0, 0, 0, 0.5)"
-              }
-            }
-          }
-        ]
+                shadowColor: "rgba(0, 0, 0, 0.5)",
+              },
+            },
+          },
+        ],
       };
       myChart.setOption(option);
-      let sizeFun = function() {
+      let sizeFun = function () {
         myChart.resize();
       };
       setTimeout(() => {
@@ -1519,23 +1521,23 @@ export default {
           axisPointer: {
             type: "cross",
             label: {
-              backgroundColor: "#6a7985"
-            }
-          }
+              backgroundColor: "#6a7985",
+            },
+          },
         },
         legend: {
           data: ["邮件营销", "联盟广告", "视频广告", "直接访问", "搜索引擎"],
           textStyle: {
             color: "#fff",
             fontWeight: "bold",
-            fontFamily: "Microsoft YaHei"
-          }
+            fontFamily: "Microsoft YaHei",
+          },
         },
         grid: {
           left: "5%",
           right: "5%",
           bottom: "5%",
-          containLabel: true
+          containLabel: true,
         },
         xAxis: [
           {
@@ -1544,26 +1546,26 @@ export default {
             data: ["周一", "周二", "周三", "周四", "周五", "周六", "周日"],
             axisLine: {
               lineStyle: {
-                color: lineColor
-              }
-            }
-          }
+                color: lineColor,
+              },
+            },
+          },
         ],
         yAxis: [
           {
             type: "value",
             splitLine: {
-              show: false
+              show: false,
             },
             axisTick: {
-              show: false
+              show: false,
             },
             axisLine: {
               lineStyle: {
-                color: lineColor
-              }
-            }
-          }
+                color: lineColor,
+              },
+            },
+          },
         ],
         series: [
           {
@@ -1571,28 +1573,28 @@ export default {
             type: "line",
             stack: "总量",
             areaStyle: {},
-            data: [120, 132, 101, 134, 90, 230, 210]
+            data: [120, 132, 101, 134, 90, 230, 210],
           },
           {
             name: "联盟广告",
             type: "line",
             stack: "总量",
             areaStyle: {},
-            data: [220, 182, 191, 234, 290, 330, 310]
+            data: [220, 182, 191, 234, 290, 330, 310],
           },
           {
             name: "视频广告",
             type: "line",
             stack: "总量",
             areaStyle: {},
-            data: [150, 232, 201, 154, 190, 330, 410]
+            data: [150, 232, 201, 154, 190, 330, 410],
           },
           {
             name: "直接访问",
             type: "line",
             stack: "总量",
             areaStyle: {},
-            data: [320, 332, 301, 334, 390, 330, 320]
+            data: [320, 332, 301, 334, 390, 330, 320],
           },
           {
             name: "搜索引擎",
@@ -1601,35 +1603,30 @@ export default {
             label: {
               normal: {
                 show: true,
-                position: "top"
-              }
+                position: "top",
+              },
             },
             areaStyle: {},
-            data: [820, 932, 901, 934, 1290, 1330, 1320]
-          }
-        ]
+            data: [820, 932, 901, 934, 1290, 1330, 1320],
+          },
+        ],
       };
       myChart.setOption({ option });
       myChart.setOption(option);
-      let sizeFun = function() {
+      let sizeFun = function () {
         myChart.resize();
       };
       setTimeout(() => {
         window.addEventListener("resize", sizeFun);
       }, 200);
-    }
+    },
   },
   mounted() {
-    let self = this;
-    setTimeout(() => {
-      self.map.center = self.map.marker;
-      self.map.zoom = 17;
-    }, 2000);
     this.chart1();
     this.chart2();
     this.chart3();
   },
-  created() {}
+  created() {},
 };
 </script>
 
@@ -1740,42 +1737,43 @@ export default {
   padding-left: 5px;
   padding-top: 5px;
   padding-bottom: 10px;
+  border-radius: 50px;
 }
 /* 内容 */
 .BMap_pop div:nth-child(9) {
   top: 35px !important;
   border-radius: 7px;
 }
-/* 左上角删除按键 */
-.BMap_pop img {
-  top: 43px !important;
-  left: 215px !important;
-}
-.BMap_top {
-  display: none;
-}
-.BMap_bottom {
-  display: none;
-}
-.BMap_center {
-  display: none;
-}
+// /* 左上角删除按键 */
+// .BMap_pop img {
+//   top: 43px !important;
+//   left: 215px !important;
+// }
+// .BMap_top {
+//   display: none;
+// }
+// .BMap_bottom {
+//   display: none;
+// }
+// .BMap_center {
+//   display: none;
+// }
 /* 隐藏边角 */
 
-.BMap_pop div:nth-child(1) div {
-  display: none;
-}
-.BMap_pop div:nth-child(3) {
-  display: none;
-}
+// .BMap_pop div:nth-child(1) div {
+//   display: none;
+// }
+// .BMap_pop div:nth-child(3) {
+//   display: none;
+// }
 
-.BMap_pop div:nth-child(5) {
-  display: none;
-}
+// .BMap_pop div:nth-child(5) {
+//   display: none;
+// }
 
-.BMap_pop div:nth-child(7) {
-  display: none;
-}
+// .BMap_pop div:nth-child(7) {
+//   display: none;
+// }
 @media screen and (max-width: 900px) {
   .dashboard {
     height: 100%;

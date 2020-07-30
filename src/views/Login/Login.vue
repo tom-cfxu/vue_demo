@@ -1,6 +1,6 @@
 <template>
   <div class="login">
-    <el-card class="box-card">
+    <el-card class="box-card1">
       <div slot="header" class="clearfix">
         <span class="login-header">龙净环保云服务平台</span>
         <!-- <el-button style="float: right; padding: 3px 0" type="text">x</el-button> -->
@@ -10,7 +10,7 @@
           <el-input
             :disabled="loading"
             v-model="form.name"
-            placeholder="admin"
+            placeholder="LJXM"
             suffix-icon="el-icon-user-solid"
           ></el-input>
         </el-form-item>
@@ -19,7 +19,7 @@
             :disabled="loading"
             v-model="form.password"
             :type="flag?'text':'password'"
-            placeholder="admin"
+            placeholder="123456"
             :change="onSubmit"
           >
             <i
@@ -30,7 +30,7 @@
           </el-input>
         </el-form-item>
         <el-button
-          :disabled="form.name==''||form.password==''"
+          :disabled="isEmpty()"
           :loading="loading"
           class="btn"
           type="primary"
@@ -51,8 +51,8 @@ export default {
       loading: false,
       form: {
         name: "",
-        password: ""
-      }
+        password: "",
+      },
     };
   },
   components: {},
@@ -60,45 +60,51 @@ export default {
     onSubmit() {
       this.loading = true;
       const formdata = this.form;
-      if (formdata.name == "admin" && formdata.password == "admin") {
-        this.$message({
-          message: `登录成功!`,
-          type: "success",
-          center: true
+      // console.log(formdata);
+      this.$axios
+        .post(
+          "/api/account/login",
+          `username=${formdata.name}&password=${formdata.password}`
+        )
+        .then((res) => {
+          // console.log(res.data);
+          if (res.data.code === "10001") {
+            localStorage.setItem("token", res.data.data.token);
+            localStorage.setItem("username", formdata.name);
+            this.$message({
+              message: `登录成功!`,
+              type: "success",
+              center: true,
+            });
+            this.loading = false;
+            this.$router.push("/home");
+          } else {
+            this.loading = false;
+            this.$message({
+              message: `用户名或密码错误`,
+              type: "error",
+              center: true,
+            });
+          }
         });
-        this.loading = false;
-        this.$router.push("/home");
-      } else {
-        this.loading = false;
-        this.$message({
-          message: `用户名或密码错误`,
-          type: "error",
-          center: true
-        });
-      }
     },
+    isEmpty() {
+      return this.form.name.trim() == "" || this.form.password.trim() == "";
+    },
+  },
+  mounted() {},
+  created() {
+    var page = this;
     // eslint-disable-next-line no-unused-vars
-    enterKey(event) {
-      // if (event.key === "Enter") {
-      //   if (this.form.name == "" || this.form.password == "") {
-      //     return;
-      //   } else {
-      //     this.onSubmit();
-      //     // console.log("登录!");
-      //   }
-      // }
-    },
-    enterKeyupDestroyed() {
-      document.removeEventListener("keyup", this.enterKey);
-    },
-    enterKeyup() {
-      document.addEventListener("keyup", this.enterKey);
-    }
+    document.onkeydown = function (e) {
+      var key = window.event.keyCode;
+      // console.log(key);
+      if (key === 13 && !page.isEmpty()) {
+        // console.log("可以登录");
+        page.onSubmit();
+      }
+    };
   },
-  mounted() {
-    this.enterKeyup();
-  },
-  created() {}
 };
 </script>
 
@@ -117,6 +123,16 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+}
+.el-card {
+  border: none;
+  // outline: none;
+  // border-radius: 5px;
+  // background-color: #d8e1fb;
+  .el-card__header {
+    border: none;
+    background-color: transparent;
+  }
 }
 .text {
   font-size: 14px;
@@ -141,8 +157,16 @@ body {
 .clearfix:after {
   clear: both;
 }
+.el-card__header {
+  background-color: #3aa485 !important;
+}
+.el-card__body {
+  .el-form {
+    padding: 20px;
+  }
+}
 
-.box-card {
+.box-card1 {
   width: 480px;
 }
 .login {
@@ -159,9 +183,10 @@ body {
 .login-header {
   font-size: 20px;
   font-weight: bold;
+  color: #fff;
 }
 .copyRight {
-  color: #5c5c5c;
+  color: #ffffff;
   position: absolute;
   bottom: 30px;
 }

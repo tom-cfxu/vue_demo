@@ -17,9 +17,9 @@ export default {
   props: {
     title: {
       type: String,
-      default: ""
-    }
-  }
+      default: "",
+    },
+  },
 };
 </script>
 
@@ -104,6 +104,7 @@ export default {
 
 .box1 {
   position: relative;
+  overflow: hidden;
   width: 100%;
   height: 100%;
   border: none;

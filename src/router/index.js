@@ -53,7 +53,7 @@ const routes = [
         name: 'alarm',
         component: () => import('@/views/Alarm/Alarm.vue'),
         meta: {
-          title: "报警日志",
+          title: "实时数据",
           tx: 3
         }
       },

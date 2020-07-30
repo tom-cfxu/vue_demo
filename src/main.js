@@ -5,12 +5,13 @@ import router from './router'
 import store from './store'
 import BaiduMap from 'vue-baidu-map'
 import echarts from 'echarts'
-import VueSocketIO from 'vue-socket.io'
-// import axios from 'axios'
+// import VueSocketIO from 'vue-socket.io'
+import axios from 'axios'
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 import VueWechatTitle from 'vue-wechat-title'
 import 'babel-polyfill';
+import monent from 'moment'
 Vue.use(VueWechatTitle)
 // axios.defaults.baseURL = 'http://localhost:3000';
 // // axios.defaults.headers.common['Authorization'] = AUTH_TOKEN;
@@ -19,14 +20,16 @@ Vue.use(VueWechatTitle)
 // Vue.prototype.HOST = '/api';
 Vue.prototype.$echarts = echarts
 Vue.config.productionTip = false;
+Vue.prototype.$axios = axios;
+Vue.prototype.$monent = monent;
 Vue.use(ElementUI);
 Vue.use(BaiduMap, {
   ak: 'bPwPDeEBO12Ry9me2FMqmqvHPjmrv1z1'
 });
-Vue.use(new VueSocketIO({
-  debug: true,
-  connection: 'http://114.116.51.4:3000',  //
-}))
+// Vue.use(new VueSocketIO({
+//   debug: false,
+//   connection: 'http://114.116.51.4:3000',  //
+// }))
 new Vue({
   router,
   store,
